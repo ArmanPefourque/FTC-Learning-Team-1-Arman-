@@ -2,13 +2,15 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.hardware.Servo;
 
 public class LinearRailTest extends LinearOpMode {
-  private Servo testServo = hardwareMap.get(Servo.class, "WTF DO I PUT HERE");
+  private Servo testServo = hardwareMap.get(Servo.class, "N/A");
   public int servoRotation = 0;
   public float minRot = 0;
   public float maxRot = 4;
+
+  // NEED TO DEFINE GAMEPAD
   
   public void runOpMode() throws InterruptedException {
-    testServo = hardwareMap.get(Servo.class, "");
+    testServo = hardwareMap.get(Servo.class, "N/A");
     testServo.setPower(100);
     testServo.setDirection()
 
