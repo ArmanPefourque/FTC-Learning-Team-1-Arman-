@@ -1,9 +1,12 @@
 package org.firstinspires.ftc.teamcode;
+import static org.firstinspires.ftc.robotcore.external.BlocksOpModeCompanion.hardwareMap;
+import static org.firstinspires.ftc.robotcore.external.BlocksOpModeCompanion.telemetry;
+
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Gamepad;
 
-public class Mecanum extends LinearOpMode {
+public class Mecanum{
     private DcMotor frontRight= null; //java sucks
     private DcMotor frontLeft= null; //python lowk better
     private DcMotor backRight= null; //we should use py
@@ -27,7 +30,7 @@ public class Mecanum extends LinearOpMode {
         telemetry.update();
 
         // Wait to press START on controller
-        waitForStart();
+        WaitForStart();
 
         while (opModeIsActive()) {
             double JOYSTICK_MIN;

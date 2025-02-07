@@ -9,7 +9,7 @@ import com.qualcomm.robotcore.hardware.Servo;
 //open and closing claw=1 Port
 
 
-public class ArmRotating extends LinearOpMode {
+public class ArmRotation {
     private String armservo="";//get config
     @Override
     public void runOpMode() {

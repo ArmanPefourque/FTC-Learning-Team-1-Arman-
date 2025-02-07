@@ -11,7 +11,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 
 
 
-public class general extends LinearOpMode {
+public class general {
     private final int SERVO_MAX_POSITION = 90;
     private DcMotor frontLeftWheel = null;
     private DcMotor frontRightWheel = null;

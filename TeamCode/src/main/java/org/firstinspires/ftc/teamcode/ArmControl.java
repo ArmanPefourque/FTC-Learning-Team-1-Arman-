@@ -5,7 +5,7 @@ import com.qualcomm.robotcore.hardware.Gamepad;
 import java.util.List;
 import java.util.ArrayList;
 
-public class ArmControl extends LinearOpMode {
+public class ArmControl{
   public int linearRailIdx = 0;
   public int clawIdx = 1;
   public int armIdx = 2;

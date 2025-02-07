@@ -3,7 +3,7 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.hardware.Gamepad;
 
-public class WheelControlTest extends LinearOpMode {
+public class WheelControlTest {
 
     public void runOpMode() throws InterruptedException {
 
