@@ -14,8 +14,8 @@ public class ArmControl{
   
   // HOW TO REMOVE LIMITS FOR SERVO ROTATIONS: Set maxRot to 9999 or set minRot to -9999
 
-  public float[] minRot = List.of(0, 0);
-  public float[] maxRot = List.of(4, 4);
+  public float[] minRot = List.of(0, 0, 0);
+  public float[] maxRot = List.of(4, 4, 4);
   
   private Gamepad gamepad = new Gamepad(); // Still needs some work...
   public List<Servo> servoIdentity = List.of(hardwareMap.get(Servo.class, "N/A"), hardwareMap.get(Servo.class, "N/A"), hardwareMap.get(Servo.class, "N/A"));
@@ -33,17 +33,25 @@ public class ArmControl{
 
     while (opModeIsActive()) {
       if (gamepad.y) {
-        SetServoPosition(linearRailIdx, servoRotations.get(linearRailIdx) + 1);
+        SetServoPosition(servoIdentity[linearRailIdx], servoRotations.get(linearRailIdx) + 1);
       }
 
       if (gamepad.a) {
-        SetServoPosition(linearRailIdx, servoRotations.get(linearRailIdx) - 1);
+        SetServoPosition(servoIdentity[linearRailIdx], servoRotations.get(linearRailIdx) - 1);
       }
 
       if (gamepad.b) {
-        SetServoPosition(clawIdx, closeClawPosition);
+        SetServoPosition(servoIdentity[clawIdx], closeClawPosition);
       } else {
-        SetServoPosition(clawIdx, openClawPosition);
+        SetServoPosition(servoIdentity[clawIdx], openClawPosition);
+      }
+      
+      if (gamepad.LeftBumper) {
+        SetServoPosition(servoIdentity[armIdx], servoRotations.get(armIdx) - 1);
+      }
+
+      if (gamepad.RightBumper) {
+        SetServoPosition(servoIdentity[armIdx], servoRotations.get(armIdx) + 1);
       }
       
       ConfineServoBoundaries();
