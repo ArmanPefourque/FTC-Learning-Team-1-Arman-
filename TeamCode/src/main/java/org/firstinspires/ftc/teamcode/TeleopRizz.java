@@ -1,5 +1,4 @@
 package org.firstinspires.ftc.teamcode; //our code
-import java;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
@@ -19,16 +18,19 @@ public class TeleopRizz extends OpMode {
     public void init(){
 //        robot.init(hardwareMap); //connects to all hardware components
         telemetry.addData("travis:", "fein fein fein fein");
-        frontLeft =
+        frontLeft = hardwareMap.get(DcMotor.class, "left_front_drive");
+        backLeft = hardwareMap.get(DcMotor.class, "left_back_drive");
+        frontRight = hardwareMap.get(DcMotor.class, "right_front_drive");
+        backRight = hardwareMap.get(DcMotor.class, "right_back_drive");
 
     }
     @Override //repeats after PLAY, BEFORE STOP
     public void loop(){
 
-        robot.frontLeft.setPower(0.1);
-        robot.backLeft.setPower(0.1);
-        robot.frontRight.setPower(0.1);
-        robot.backRight.setPower(0.1);
+        frontLeft.setPower(1);
+        backLeft.setPower(1);
+        frontRight.setPower(1);
+        backRight.setPower(1);
         telemetry.addLine(String.format("It should be moving"));
 
 //        Thread.sleep(2000)//Francisco only wants to see the robot move
