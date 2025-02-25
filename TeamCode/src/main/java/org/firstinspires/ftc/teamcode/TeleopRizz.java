@@ -41,7 +41,7 @@ public class TeleopRizz extends OpMode {
      public float[] maxRot = List.of(4, 4, 4);
     
      private Gamepad gamepad = new Gamepad(); // Still needs some work...
-     public List<Servo> servoIdentity = List.of(hardwareMap.get(Servo.class, "N/A"), hardwareMap.get(Servo.class, "N/A"), hardwareMap.get(Servo.class, "N/A"));
+     public List<Servo> servoIdentity = List.of(hardwareMap.get(Servo.class, "lr"), hardwareMap.get(Servo.class, "clw"), hardwareMap.get(Servo.class, "arm"));
     
      // NEED TO ADJUST CLOSE AND OPEN CLAW POSITIONS
      public float closeClawPosition = 0;
