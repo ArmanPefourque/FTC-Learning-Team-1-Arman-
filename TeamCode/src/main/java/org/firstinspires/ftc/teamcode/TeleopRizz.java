@@ -7,6 +7,18 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.hardware.Gamepad;
 
+// LIST OF THINGS TO DO
+// 1. Find out how to connect gamepad
+// 2. Put the correct servo ids
+// 3. I don't think gamepad.bumper is a thing???
+// 4. Fix BUGS
+// 5. Fix BUGS Pt. 2
+// 6. Fix BUGS Pt. 3
+// 7. Fix BUGS Pt. 3
+// 8. Fix BUGS Pt. 4
+// 9. Fix BUGS Pt. 5
+// Keep going until the end of eternity...
+
 //TEST
 @TeleOp(name="TeleopRizz", group="Pushbot")
 public class TeleopRizz extends OpMode {
