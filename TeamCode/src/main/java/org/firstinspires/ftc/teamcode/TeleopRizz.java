@@ -14,6 +14,8 @@ public class TeleopRizz extends OpMode {
 
     RobotHardwareLite robot = new RobotHardwareLite();
 
+    gamepad1 = new gamepad();
+
     @Override
     public void init(){
 //        robot.init(hardwareMap); //connects to all hardware components
@@ -26,13 +28,13 @@ public class TeleopRizz extends OpMode {
     }
     @Override //repeats after PLAY, BEFORE STOP
     public void loop(){
-
-        frontLeft.setPower(1);
-        backLeft.setPower(1);
-        frontRight.setPower(1);
-        backRight.setPower(1);
-        telemetry.addLine(String.format("It should be moving"));
-
+        if (gamepad1.a) {
+            frontLeft.setPower(1);
+            backLeft.setPower(1);
+            frontRight.setPower(1);
+            backRight.setPower(1);
+            telemetry.addLine(String.format("It should be moving"));
+        }
 //        Thread.sleep(2000)//Francisco only wants to see the robot move
     }
 }
