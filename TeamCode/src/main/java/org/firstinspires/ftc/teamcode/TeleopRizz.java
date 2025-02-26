@@ -3,6 +3,8 @@ package org.firstinspires.ftc.teamcode; //our code
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.Gamepad;
+
 //TEST
 @TeleOp(name="TeleopRizz", group="Pushbot")
 public class TeleopRizz extends OpMode {
@@ -12,9 +14,9 @@ public class TeleopRizz extends OpMode {
     private DcMotor backRight= null; //we should use py
     private DcMotor backLeft= null; //
 
-    RobotHardwareLite robot = new RobotHardwareLite();
+    //RobotHardwareLite robot = new RobotHardwareLite();
 
-    gamepad1 = new gamepad();
+    Gamepad gamepad1 = new Gamepad();
 
     @Override
     public void init(){

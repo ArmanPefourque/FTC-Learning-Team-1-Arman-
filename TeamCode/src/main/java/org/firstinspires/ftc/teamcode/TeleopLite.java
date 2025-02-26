@@ -10,7 +10,7 @@ public class TeleopLite extends OpMode {
     static double RAIL_MIN = 0.0f;
     static double RAIL_MAX = 3000.0f;
 
-    final double joystickBaseSpeed = 0.3f;
+    final double joystickBaseSpeed = 1f;
     RobotHardwareLite robot = new RobotHardwareLite();
     double railPos = 0.0f;
 
@@ -48,9 +48,9 @@ public class TeleopLite extends OpMode {
         final_strafe += (gamepad1.left_stick_x * joystickMultiplier);
         final_yaw += (gamepad1.right_stick_x * joystickMultiplier);
 
-        robot.frontLeft.setPower(final_throttle - final_strafe - final_yaw);
+        robot.frontLeft.setPower(0.6*(final_throttle - final_strafe - final_yaw));
         robot.backLeft.setPower(final_throttle + final_strafe - final_yaw);
-        robot.frontRight.setPower(-final_throttle - final_strafe - final_yaw);
+        robot.frontRight.setPower(0.6*(-final_throttle - final_strafe - final_yaw));
         robot.backRight.setPower(-final_throttle + final_strafe - final_yaw);
 
 //        telemetry.addLine(String.format("Right Trigger: %6.2f", gamepad1.right_trigger));
