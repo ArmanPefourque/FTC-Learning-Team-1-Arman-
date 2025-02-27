@@ -9,11 +9,13 @@ import com.qualcomm.robotcore.hardware.Gamepad;
 @TeleOp(name="TeleopRizz", group="Pushbot")
 public class TeleopRizz extends OpMode {
 
-    private DcMotor frontRight= null; //jaZDVVZDZDZSVVZDZDVva sucks
-    private DcMotor frontLeft= null; //python lowk better
-    private DcMotor backRight= null; //we should use py
-    private DcMotor backLeft= null; //
-
+    private DcMotor frontRight= ; // sucks
+    private DcMotor frontLeft= ; //python lowk better
+    private DcMotor backRight= ; //we should use py
+    private DcMotor backLeft= ; 
+    private Servo   claw;
+    private Servo   linear_rail;
+    
     //RobotHardwareLite robot = new RobotHardwareLite();
 
     Gamepad gamepad1 = new Gamepad();
@@ -26,6 +28,8 @@ public class TeleopRizz extends OpMode {
         backLeft = hardwareMap.get(DcMotor.class, "left_back_drive");
         frontRight = hardwareMap.get(DcMotor.class, "right_front_drive");
         backRight = hardwareMap.get(DcMotor.class, "right_back_drive");
+        claw = hardwareMap.get(Servo.class, "clawservo");
+        linear_rail = hardewareMap.get(Servo.class, "rail");
 
     }
     @Override //repeats after PLAY, BEFORE STOP
@@ -36,6 +40,15 @@ public class TeleopRizz extends OpMode {
             frontRight.setPower(1);
             backRight.setPower(1);
             telemetry.addLine(String.format("It should be moving"));
+        if (gamepad1.b){
+
+            claw.setPosition(110);
+        }
+        if (gamepad.x){
+                linear_rail.setPosition(180);
+            }
+            
+            
         }
 //        Thread.sleep(2000)//Francisco only wants to see the robot move
     }
