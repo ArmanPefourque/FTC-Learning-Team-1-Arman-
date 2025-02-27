@@ -9,10 +9,10 @@ import com.qualcomm.robotcore.hardware.Gamepad;
 @TeleOp(name="TeleopRizz", group="Pushbot")
 public class TeleopRizz extends OpMode {
 
-    private DcMotor frontRight= ; // sucks
-    private DcMotor frontLeft= ; //python lowk better
-    private DcMotor backRight= ; //we should use py
-    private DcMotor backLeft= ; 
+    private DcMotor frontRight; // sucks
+    private DcMotor frontLeft; //python lowk better
+    private DcMotor backRight; //we should use py
+    private DcMotor backLeft; 
     private Servo   claw;
     private Servo   linear_rail;
     
