@@ -42,10 +42,10 @@ public class TeleopRizz extends OpMode {
             telemetry.addLine(String.format("It should be moving"));
         if (gamepad1.b){
 
-            claw.setPosition(110);
+            claw.setPosition(0.4);
         }
         if (gamepad.x){
-                linear_rail.setPosition(180);
+                linear_rail.setPosition(1);
             }
             
             
